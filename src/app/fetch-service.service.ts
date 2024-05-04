@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class FetchServiceService {
 
-  constructor() { }
-
+  private url = 'http://127.0.0.1:8000/rooms';
+  constructor(private httpClient: HttpClient) { }
+  
+  
   listRoom(){
-    fetch('http://127.0.0.1:8000/rooms')
-      .then(response => response.json())
-      .then(json => console.log(json))
+    
+    return this.httpClient.get(this.url);  
   }
+
 }
