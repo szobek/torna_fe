@@ -1,8 +1,8 @@
-<h1>Szobák</h1>
+<h1 class="title">Szobák</h1>
 <div class="container">
-  <div class="row"><div class="col-12">
+  <div class="row room-list">
 
-    @for (room of rooms; let i =$index; track i; ) {
+    @for (room of rooms ; let i =$index; track i; ) {
       <div class="card room-class">
         
         <div class="card-header">
@@ -16,12 +16,14 @@
           {{room.created_at|date}}
         </div>
       </div>
+
+
+     
     }
 
     @empty {
       No items found
       }
   </div>
-</div>
 </div>
 <router-outlet />

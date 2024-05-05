@@ -1,4 +1,19 @@
-.room-class{
-    margin: 10px auto;
-    
+.room-list{
+    flex-wrap: wrap;
+    gap: 10px;
+    .room-class{
+        min-width: 200px; 
+        max-width: 300px;
+    }
+}
+
+
+
+.title{
+    text-decoration: underline;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 15px auto;
+    padding-bottom: 15px ;
 }
