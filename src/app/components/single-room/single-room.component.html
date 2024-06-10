@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            @if(room!=undefined){
+                <h1 class="text-center">
+                    Szoba adatai:
+                </h1>
+                <div class="room-class">
+                  
+                  <div class="">
+                    id:{{room.id}}
+                  </div>
+          
+                  <div class="">
+                    <p> Leírás: {{room.description}} </p>
+                    <p> Emelet: {{room.floor}} </p>
+                    <p> Ablak: {{(room.window)?" van":" nincs"}} </p>
+                    <p> Klíma: {{(room.climatic)?" van":" nincs"}} </p>
+                    <p> Ár: {{room.price}}  </p>
+                    <p> Létrehozva: {{room.created_at | date}} </p>
+                    <p>Képek: <a href="{{room.img_dir}}" target="_blank">{{room.img_dir}}</a> </p>
+          
+                  </div>
+                  
+                </div>
+          
+          
+               
+          
+              
+            }@else{
+              load room...
+            }
+          
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p class="text-center">
+                <a [routerLink]="['']">Vissza</a>
+            </p>
+        </div>
+    </div>
+</div>

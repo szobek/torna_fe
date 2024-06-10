@@ -1,0 +1,29 @@
+.room-list{
+    flex-wrap: wrap;
+    gap: 10px;
+    .room-class{
+
+            .card-header{
+                text-align: center;
+                text-decoration: underline;
+                font-style: italic;
+            }
+            .card-footer{
+                text-align: center;
+            }
+        min-width: 200px; 
+        max-width: 300px;
+        padding: 0;
+    }
+}
+
+
+
+.title{
+    text-decoration: underline;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 15px auto;
+    padding-bottom: 15px ;
+}

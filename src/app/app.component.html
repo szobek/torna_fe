@@ -1,29 +1,2 @@
-<h1 class="title">Szobák</h1>
-<div class="container">
-  <div class="row room-list">
 
-    @for (room of rooms ; let i =$index; track i; ) {
-      <div class="card room-class">
-        
-        <div class="card-header">
-          id:{{room.id}}
-        </div>
-
-        <div class="card-body">
-          Leírás: {{room.description}}
-        </div>
-        <div class="card-footer">
-          {{room.created_at|date}}
-        </div>
-      </div>
-
-
-     
-    }
-
-    @empty {
-      No items found
-      }
-  </div>
-</div>
 <router-outlet />

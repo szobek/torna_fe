@@ -1,0 +1,39 @@
+<h1 class="title">Szobák</h1>
+<div class="container">
+  <div class="row room-list">
+
+    @if(rooms.length>0){
+      @for (room of rooms ; let i =$index; track i; ) {
+        <div class="card room-class">
+          
+          <div class="card-header">
+            id:{{room.id}}
+          </div>
+  
+          <div class="card-body">
+            <p> Leírás: {{room.description}} </p>
+            <p> Emelet: {{room.floor}} </p>
+            <p> Ablak: {{(room.window)?" van":" nincs"}} </p>
+            <p> Klíma: {{(room.climatic)?" van":" nincs"}} </p>
+            <p> Ár: {{room.price}}  </p>
+            <p> Létrehozva: {{room.created_at | date}} </p>
+            <p>Képek: <a href="{{room.img_dir}}" target="_blank">{{room.img_dir}}</a> </p>
+  
+          </div>
+          <div class="card-footer">
+           <a [routerLink]="['room',room.id]" class="btn btn-primary">Részletek</a>
+          </div>
+        </div>
+  
+  
+       
+      }
+  
+      @empty {
+        no room
+        }
+    }@else{
+      load rooms...
+    }
+  </div>
+</div>
