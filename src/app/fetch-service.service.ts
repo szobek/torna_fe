@@ -24,4 +24,8 @@ export class FetchServiceService {
     return this.httpClient.get<Room>(`http://127.0.0.1:8000/get_room/${id}`)
   }
 
+  deleteRoom(id:number){
+    return this.httpClient.delete(`http://127.0.0.1:8000/delete_room/${id}`)
+  }
+
 }
