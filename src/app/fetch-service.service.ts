@@ -28,4 +28,8 @@ export class FetchServiceService {
     return this.httpClient.delete(`http://127.0.0.1:8000/delete_room/${id}`)
   }
 
+  createRoom(datas:any){
+    return this.httpClient.post(`http://127.0.0.1:8000/create_room`,datas)
+  }
+
 }

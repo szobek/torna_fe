@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">
+                Szoba adatai:
+              </h1>
+              <div class="room-class">
+                <form [formGroup]="createRoomForm" (ngSubmit)="onSubmit()">
+            
+                <div class="">
+                  <p><label for="num">Száma:</label>  <input type="text"  id="num" formControlName="num"> </p>
+                  <p><label for="description">Leírás:</label>  <input type="text"  id="description" formControlName="description"> </p>
+                  <p><label for="floor">Emelet:</label>  <input type="text"  id="floor" formControlName="floor"></p>
+                  <p><label for="window">Ablak: </label>  <input type="checkbox" id="window"  formControlName="window"> </p>
+                  <p><label for="climatic">Klíma: </label>  <input type="checkbox"  id="climatic" formControlName="climatic"></p>
+                  <p><label for="mirror">Tükör:</label>  <input type="checkbox"  id="mirror" formControlName="mirror"></p>
+                  <p> <label for="price">Ár:</label> <input type="number" id="price" formControlName="price"></p>
+                  <p><label for="img_dir">Képek:</label><input type="text"  id="img_dir" formControlName="img_dir"></p>
+            
+                </div>
+                <p>Complete the form to enable button.</p>
+            <button type="submit" [disabled]="!createRoomForm.valid">Submit</button>
+                </form>
+              </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
