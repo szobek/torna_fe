@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { FetchServiceService } from './fetch-service.service';
+import { FetchServiceService } from './services/fetch-service.service';
 import { CommonModule } from '@angular/common';
 import { Room } from './models/room/room.model';
 @Component({

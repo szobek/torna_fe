@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Room } from './models/room/room.model';
+import { Room } from '../models/room/room.model';
 
 
 @Injectable({
@@ -30,6 +30,15 @@ export class FetchServiceService {
 
   createRoom(datas:any){
     return this.httpClient.post(`http://127.0.0.1:8000/create_room`,datas)
+  }
+
+  getToken(loginDatas:any){
+    
+    return this.httpClient.post(`http://127.0.0.1:8000/api/login`,loginDatas)
+  }
+
+  refreshToken(token:string){
+    return this.httpClient.post(`http://127.0.0.1:8000/api/refresh`,``,)
   }
 
 }

@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:torna_fe": "node dist/torna_fe/server/server.mjs"
+    "serve:ssr:torna_fe": "node dist/torna_fe/server/server.mjs",
+    "serve:dec": ""
+
   },
   "private": true,
   "dependencies": {

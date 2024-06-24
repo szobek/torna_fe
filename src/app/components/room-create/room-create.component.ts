@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { FetchServiceService } from '../../fetch-service.service';
+import { FetchServiceService } from '../../services/fetch-service.service';
 import { Router } from '@angular/router';
 
 @Component({
